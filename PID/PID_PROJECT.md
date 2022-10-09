@@ -53,7 +53,7 @@ Le site web sera en **React** et l'application mobile en **Flutter Dart**. L'API
 
 ## Uses cases
 
-(En cours de rédaction)
+<img src="use-cases.png"/>
 
 ## Méthodologie de delivery
 
