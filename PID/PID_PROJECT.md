@@ -14,12 +14,13 @@ Le but de ce projet est d'avoir  :
 
 - Un site web comportant :
   - Une page d'accueil servant de vitrine où l'on pourra avoir une carte des centres sportifs partenaires du site
-  - Une partie dédié pour les centre sportifs partenaires qui veulent souscrire à notre site web
+  - Une partie dédié pour les centre sportifs partenaires -> organiser des évènements, mettre en place les prix de leurs activités et les horaires
 - Une application mobile pour les utilisateurs, ils pourront :
   - Organiser des énements (public ou privé) -> Nombres de participants, prix, date, heure, lieu (partenaires à Minder ou non), sport, etc...
   - Rejoindre des événements
   - Donner des avis sur les événements et les participants (si l'événement est public)
   - Donner des avis sur les centres sportifs partenaires
+  - Les centres sportifs pourront organiser des tournois, events, etc... en partenariat avec Minder
   - Parainner des futurs centres sportifs
 - Une API qui récupère différentes informations :
   - Les centres sportifs
