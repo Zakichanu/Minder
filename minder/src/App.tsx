@@ -21,18 +21,18 @@ function App() {
   }, [action]);
 
   useEffect(() => {
-    let title = "";
-    let metaDescription = "";
+    let title = "Minder";
+    let metaDescription = "Faites du sport près de chez vous";
 
     //TODO: Update meta titles and descriptions below
     switch (pathname) {
       case "/":
-        title = "";
-        metaDescription = "";
+        title = "Minder - Accueil";
+        metaDescription = "Vitrine";
         break;
       case "/SignupSC":
-        title = "";
-        metaDescription = "";
+        title = "Espace centre sportif - Inscription";
+        metaDescription = "Inscription";
         break;
     }
 

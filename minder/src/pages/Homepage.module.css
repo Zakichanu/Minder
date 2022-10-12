@@ -105,24 +105,24 @@
   .rejoignezNousDiv.animate {
     animation: 1s ease 0s 1 normal none scale-up;
   }
-  .image1Icon,
-  .image2Icon {
+  .applestoreIcon,
+  .googleplayIcon {
     position: absolute;
     object-fit: cover;
     opacity: 1;
   }
-  .image1Icon {
+  .applestoreIcon {
     top: 795px;
     left: 637px;
     border-radius: 226px;
     width: 129px;
     height: 130px;
   }
-  .image1Icon.animate,
-  .image2Icon.animate {
+  .applestoreIcon.animate,
+  .googleplayIcon.animate {
     animation: 1s ease 0s 1 normal forwards scale-up;
   }
-  .image2Icon {
+  .googleplayIcon {
     top: 786px;
     left: 835px;
     width: 120px;

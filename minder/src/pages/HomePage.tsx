@@ -1,20 +1,9 @@
-import { FunctionComponent, useCallback, useEffect } from "react";
+import { FunctionComponent, useEffect } from "react";
 
 import NavBar from "../components/NavBar";
 import styles from "./Homepage.module.css";
-import { useNavigate } from "react-router-dom";
 
 const Homepage: FunctionComponent = () => {
-  const navigate = useNavigate();
-
-  const goSportCenter = useCallback(() => {
-    navigate("/SignupSC");
-  }, [navigate]);
-
-  const goHome = useCallback(() => {
-    navigate("/SignupSC");
-  }, [navigate]);
-
   useEffect(() => {
     const scrollAnimElements = document.querySelectorAll(
       "[data-animate-on-scroll]"
@@ -67,13 +56,13 @@ const Homepage: FunctionComponent = () => {
         Rejoignez nous
       </div>
       <img
-        className={styles.image1Icon}
+        className={styles.applestoreIcon}
         alt=""
         src="../apple-store-logo@2x.png"
         data-animate-on-scroll
       />
       <img
-        className={styles.image2Icon}
+        className={styles.googleplayIcon}
         alt=""
         src="../google-play-logo@2x.png"
         data-animate-on-scroll

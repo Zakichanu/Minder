@@ -8,8 +8,7 @@
       opacity: 1;
     }
   }
-  .logoComplet1,
-  .rectangleIcon {
+  .logoComplet1 {
     position: absolute;
     top: 0;
     left: 0;
@@ -48,49 +47,49 @@
     height: 53px;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
-  .inputOutlinedTextField {
+  .nameRepresentSCInput {
     border: 0;
     background-color: transparent;
     position: absolute;
     top: 388px;
     left: 466px;
   }
-  .inputOutlinedTextField1,
-  .inputOutlinedTextField2,
-  .inputOutlinedTextField3 {
+  .citySCInput,
+  .mailSCInput,
+  .postalCodeSCInput {
     border: 0;
     background-color: transparent;
     position: absolute;
     top: 564px;
     left: 466px;
   }
-  .inputOutlinedTextField2,
-  .inputOutlinedTextField3 {
+  .mailSCInput,
+  .postalCodeSCInput {
     top: 637px;
   }
-  .inputOutlinedTextField3 {
+  .postalCodeSCInput {
     top: 568px;
     left: 825px;
   }
-  .inputOutlinedTextField4,
-  .inputOutlinedTextField5,
-  .inputOutlinedTextField6 {
+  .telSCInput,
+  .addSCInput,
+  .fnameRepresentSCInput {
     border: 0;
     background-color: transparent;
     position: absolute;
     top: 637px;
     left: 825px;
   }
-  .inputOutlinedTextField5,
-  .inputOutlinedTextField6 {
+  .addSCInput,
+  .fnameRepresentSCInput {
     top: 478px;
     left: 466px;
   }
-  .inputOutlinedTextField6 {
+  .fnameRepresentSCInput {
     top: 388px;
     left: 825px;
   }
-  .buttonContainedText {
+  .signupButton {
     position: absolute;
     top: 749px;
     left: 685px;

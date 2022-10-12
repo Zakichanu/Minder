@@ -48,7 +48,7 @@ const SignupSC: FunctionComponent = () => {
         Inscrivez votre centre sportif
       </div>
       <TextField
-        className={styles.inputOutlinedTextField}
+        className={styles.nameRepresentSCInput}
         sx={{ width: 220 }}
         color="secondary"
         variant="outlined"
@@ -60,7 +60,7 @@ const SignupSC: FunctionComponent = () => {
         required
       />
       <TextField
-        className={styles.inputOutlinedTextField1}
+        className={styles.citySCInput}
         sx={{ width: 284 }}
         color="secondary"
         variant="outlined"
@@ -72,7 +72,7 @@ const SignupSC: FunctionComponent = () => {
         required
       />
       <TextField
-        className={styles.inputOutlinedTextField2}
+        className={styles.mailSCInput}
         sx={{ width: 284 }}
         color="secondary"
         variant="outlined"
@@ -84,7 +84,7 @@ const SignupSC: FunctionComponent = () => {
         required
       />
       <TextField
-        className={styles.inputOutlinedTextField3}
+        className={styles.postalCodeSCInput}
         sx={{ width: 220 }}
         color="secondary"
         variant="outlined"
@@ -96,7 +96,7 @@ const SignupSC: FunctionComponent = () => {
         required
       />
       <TextField
-        className={styles.inputOutlinedTextField4}
+        className={styles.telSCInput}
         sx={{ width: 220 }}
         color="secondary"
         variant="outlined"
@@ -108,7 +108,7 @@ const SignupSC: FunctionComponent = () => {
         required
       />
       <TextField
-        className={styles.inputOutlinedTextField5}
+        className={styles.addSCInput}
         sx={{ width: 579 }}
         color="secondary"
         variant="outlined"
@@ -120,7 +120,7 @@ const SignupSC: FunctionComponent = () => {
         required
       />
       <TextField
-        className={styles.inputOutlinedTextField6}
+        className={styles.fnameRepresentSCInput}
         sx={{ width: 220 }}
         color="secondary"
         variant="outlined"
@@ -132,7 +132,7 @@ const SignupSC: FunctionComponent = () => {
         required
       />
       <Button
-        className={styles.buttonContainedText}
+        className={styles.signupButton}
         sx={{ width: 142 }}
         variant="contained"
         color="secondary"
