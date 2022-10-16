@@ -1,4 +1,4 @@
-# <img src="documentation/Logo-complet.png" align="center" width="200"/>
+# <img src="documentation/Logo_complet-removebg-preview.png" align="center" width="200"/>
 
 Minder est un projet communautaire dans l'organisation d'événements sportif, de tout types
 
