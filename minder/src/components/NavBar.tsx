@@ -1,6 +1,7 @@
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import Grid from '@material-ui/core/Grid';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -27,19 +28,25 @@ export default function ButtonAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <Box
-            m="auto"
-            component="img"
-            sx={{
-              height: 50,
-              width: 150,
-            }}
-            alt="Minder"
-            src="../logo-complete@2x.png"
-            onClick={() => window.location.href = "/"}
-          />
+          <Grid container justify="center">
+            <Box
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              component="img"
+              sx={{
+                height: 50,
+                width: 150,
+
+              }}
+              alt="Minder"
+              src="../logo-complete@2x.png"
+              onClick={() => window.location.href = "/"}
+            />
+          </Grid>
+
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            <Button color="inherit" onClick={() => window.location.href = "/SignupSC"}>Espace partenaires</Button>
+            <Button color="inherit" onClick={() => window.location.href = "/SignupSC"}>Partenaires</Button>
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -73,7 +80,7 @@ export default function ButtonAppBar() {
             }}
           >
             <MenuItem>
-              <Button color="inherit" onClick={() => window.location.href = "/SignupSC"}>Espace partenaires</Button>
+              <Button color="inherit" onClick={() => window.location.href = "/SignupSC"}>Partenaires</Button>
             </MenuItem>
           </Menu>
         </Toolbar>
