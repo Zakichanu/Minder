@@ -1,4 +1,4 @@
-# <img src="documentation/Logo_complet-removebg-preview.png" align="center" width="200"/>
+# <img src="Logo-complet.png" align="center" width="200"/>
 
 Minder est un projet communautaire dans l'organisation d'événements sportif, de tout types
 
@@ -42,9 +42,9 @@ Le site web sera en **React** et l'application mobile en **Flutter Dart**. L'API
 
 ## Planning du projet
 
-- Plan général du projet à travers notre page [**Notion**](https://melodic-belt-5d6.notion.site/Minder-6959df9cff8348298d99615a1df31f6f) : <img src="documentation/Plan.png"/>
-- Plan détaillé sur **GitHub Projects** : <img src="documentation/Plan-GitHub.png"/>
-- Liste des choses à faire selon le projet (exemple avec Minder-Website) : <img src="documentation/Plan-Issues-MinderWeb.png"/>
+- Plan général du projet à travers notre page [**Notion**](https://melodic-belt-5d6.notion.site/Minder-6959df9cff8348298d99615a1df31f6f) : <img src="Plan.png"/>
+- Plan détaillé sur **GitHub Projects** : <img src="Plan-GitHub.png"/>
+- Liste des choses à faire selon le projet (exemple avec Minder-Website) : <img src="Plan-Issues-MinderWeb.png"/>
 ## Répartition des tâches
 
 | Tâche | Responsable(s) | Avancement |
@@ -61,7 +61,7 @@ Le site web sera en **React** et l'application mobile en **Flutter Dart**. L'API
 
 Un diagramme de cas d'utilisation qui résume ce qu'on veut faire :
 
-<img src="documentation/use-cases.png"/>
+<img src="use-cases.png"/>
 
 ## Méthodologie de delivery
 
