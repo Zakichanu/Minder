@@ -7,6 +7,7 @@ import {
 
 import Homepage from "./pages/HomePage";
 import SignupSC from "./pages/SignupSC";
+import LoginSC from "./pages/LoginSC";
 import { useEffect } from "react";
 
 function App() {
@@ -30,9 +31,15 @@ function App() {
         title = "Minder - Accueil";
         metaDescription = "Vitrine";
         break;
+
       case "/SignupSC":
         title = "Espace centre sportif - Inscription";
         metaDescription = "Inscription";
+        break;
+
+      case "/LoginSC":
+        title = "Espace centre sportif - Connexion";
+        metaDescription = "Connexion";
         break;
     }
 
@@ -55,6 +62,8 @@ function App() {
       <Route path="/" element={<Homepage />} />
 
       <Route path="/SignupSC" element={<SignupSC />} />
+
+      <Route path="/LoginSC" element={<LoginSC />} />
     </Routes>
   );
 }

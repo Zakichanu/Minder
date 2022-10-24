@@ -1,0 +1,122 @@
+@keyframes slide-in-top {
+    0% {
+      transform: translateY(-200px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .logoComplet1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1512px;
+    height: 88px;
+  }
+  .logoComplet1 {
+    top: 16px;
+    width: 222px;
+    height: 55px;
+    object-fit: cover;
+  }
+  .rectangleDiv {
+    position: fixed;
+    top: 17%;
+    left: 27%;
+    border-radius: 55px;
+    background-color: var(--color-white);
+    width: 722px;
+    height: 645px;
+  }
+  .logoPetit1Icon {
+    position: absolute;
+    left: 42%;
+    width: 15%;
+    height: 18%;
+    object-fit: cover;
+  }
+  .inscrivezVotreCentreSportif {
+    position: absolute;
+    top: 25%;
+    left: 24%;
+    display: inline-block;
+    width: 376px;
+    height: 53px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .nameRepresentSCInput {
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 40%;
+    left: 34%;
+  }
+  .citySCInput{
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 34%;
+  }
+  .signupButton {
+    top: 80%;
+    right: 30%;
+  }
+  .signupButtonConnexion {
+    top: 80%;
+    left: 30%;
+  }
+
+
+  .mailSCInput,
+  .postalCodeSCInput {
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 564px;
+    left: 466px;
+  }
+  .mailSCInput,
+  .postalCodeSCInput {
+    top: 637px;
+  }
+  .postalCodeSCInput {
+    top: 568px;
+    left: 825px;
+  }
+  .telSCInput,
+  .addSCInput,
+  .fnameRepresentSCInput {
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 637px;
+    left: 825px;
+  }
+  .addSCInput,
+  .fnameRepresentSCInput {
+    top: 478px;
+    left: 466px;
+  }
+  .fnameRepresentSCInput {
+    top: 388px;
+    left: 825px;
+  }
+  .signupSCDiv {
+    position: relative;
+    background-color: var(--color-violet);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    opacity: 0;
+    text-align: center;
+    font-size: 25px;
+    color: var(--color-violet);
+    font-family: var(--font-solway);
+  }
+  .signupSCDiv.animate {
+    animation: 0.25s ease 0s 1 normal forwards slide-in-top;
+  }
+  
