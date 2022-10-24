@@ -58,13 +58,13 @@ const Homepage: FunctionComponent = () => {
       <img
         className={styles.applestoreIcon}
         alt=""
-        src="../apple-store-logo@2x.png"
+        src="../install_on_apple.png"
         data-animate-on-scroll
       />
       <img
         className={styles.googleplayIcon}
         alt=""
-        src="../google-play-logo@2x.png"
+        src="../install_on_android.png"
         data-animate-on-scroll
       />
     </div>
