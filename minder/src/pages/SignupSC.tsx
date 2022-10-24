@@ -38,7 +38,8 @@ const SignupSC: FunctionComponent = () => {
   return (
     <div className={styles.signupSCDiv} data-animate-on-scroll>
       <NavBar />
-      <div className={styles.rectangleDiv} />
+      <div className={styles.rectangleDiv}>
+
       <img
         className={styles.logoPetit1Icon}
         alt=""
@@ -57,11 +58,14 @@ const SignupSC: FunctionComponent = () => {
         placeholder="Nom du représentant"
         size="small"
         margin="none"
+        InputProps={{
+          className: styles.SCInputMobile,
+        }}
         required
       />
       <TextField
         className={styles.citySCInput}
-        sx={{ width: 284 }}
+        sx={{ width: 220 }}
         color="secondary"
         variant="outlined"
         type="text"
@@ -69,11 +73,14 @@ const SignupSC: FunctionComponent = () => {
         placeholder="Ville du Centre Sportif"
         size="small"
         margin="none"
+        InputProps={{
+          className: styles.SCInputMobile,
+        }}
         required
       />
       <TextField
         className={styles.mailSCInput}
-        sx={{ width: 284 }}
+        sx={{ width: 220 }}
         color="secondary"
         variant="outlined"
         type="email"
@@ -81,6 +88,9 @@ const SignupSC: FunctionComponent = () => {
         placeholder="Mail du Centre Sportif"
         size="small"
         margin="none"
+        InputProps={{
+          className: styles.SCInputMobile,
+        }}
         required
       />
       <TextField
@@ -93,6 +103,9 @@ const SignupSC: FunctionComponent = () => {
         placeholder="Code postal du Centre Sportif"
         size="small"
         margin="none"
+        InputProps={{
+          className: styles.SCInputMobile,
+        }}
         required
       />
       <TextField
@@ -105,6 +118,9 @@ const SignupSC: FunctionComponent = () => {
         placeholder="Téléphone du Centre Sportif"
         size="small"
         margin="none"
+        InputProps={{
+          className: styles.SCInputMobile,
+        }}
         required
       />
       <TextField
@@ -117,6 +133,9 @@ const SignupSC: FunctionComponent = () => {
         placeholder="Adresse Centre Sportif"
         size="small"
         margin="none"
+        InputProps={{
+          className: styles.SCInputMobile,
+        }}
         required
       />
       <TextField
@@ -129,6 +148,9 @@ const SignupSC: FunctionComponent = () => {
         placeholder="Prénom du représentant"
         size="small"
         margin="none"
+        InputProps={{
+          className: styles.SCInputMobile,
+        }}
         required
       />
       <Button
@@ -137,8 +159,9 @@ const SignupSC: FunctionComponent = () => {
         variant="contained"
         color="secondary"
       >
-        Soumettre
+        Envoyer
       </Button>
+      </div>
     </div>
   );
 };

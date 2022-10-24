@@ -37,6 +37,7 @@ export default function ButtonAppBar() {
               sx={{
                 height: 50,
                 width: 150,
+                marginLeft: 12,
 
               }}
               alt="Minder"
