@@ -41,57 +41,66 @@ const LoginSC: FunctionComponent = () => {
 
       <div className={styles.rectangleDiv}>
 
-      <img
-        className={styles.logoPetit1Icon}
-        alt=""
-        src="../logopetit-1@2x.png"
-      />
+        <img
+          className={styles.logoPetit1Icon}
+          alt=""
+          src="../logopetit-1@2x.png"
+        />
 
-      <div className={styles.inscrivezVotreCentreSportif}>
-        Connectez vous!
-      </div>
+        <div className={styles.inscrivezVotreCentreSportif}>
+          Connectez vous!
+        </div>
 
-      <TextField
-        className={styles.nameRepresentSCInput}
-        color="secondary"
-        variant="outlined"
-        type="text"
-        label="Username"
-        placeholder="Username"
-        size="small"
-        margin="none"
-        required
-      />
-      <TextField
-        className={styles.citySCInput}
-        color="secondary"
-        variant="outlined"
-        type="password"
-        label="Password"
-        placeholder="Password"
-        size="small"
-        margin="none"
-        required
-      />
-      
-      
-      <Button
-        className={styles.signupButtonConnexion}
-        sx={{ width: 142 }}
-        variant="contained"
-        color="secondary"
-      >
-        Connexion
-      </Button>
+        <TextField
+          className={styles.mailSCInput}
+          sx={{ width: 600 }}
+          color="secondary"
+          variant="outlined"
+          type="email"
+          label="Mail CS"
+          placeholder="Mail du Centre Sportif"
+          size="small"
+          margin="none"
+          InputProps={{
+            className: styles.SCInputMobile,
+          }}
+          required
+        />
+        <TextField
+          className={styles.passwordSCInput}
+          color="secondary"
+          sx={{ width: 600 }}
+          variant="outlined"
+          type="password"
+          label="Mot de passe"
+          placeholder="Mot de passe"
+          size="small"
+          margin="none"
+          InputProps={{
+            className: styles.SCInputMobile,
+          }}
+          required
+        />
 
-      <Button
-        className={styles.signupButton}
-        sx={{ width: 142 }}
-        variant="contained"
-        color="secondary"
-      >
-        Annuler
-      </Button>
+
+        <Button
+          className={styles.signupButtonConnexion}
+          sx={{ width: 142 }}
+          variant="contained"
+          color="secondary"
+        >
+          Connexion
+        </Button>
+
+        <Button
+          className={styles.signupButtonCancel}
+          sx={{ width: 142 }}
+          variant="contained"
+          color="error"
+          onClick={() => window.location.href = "/SignupSC"}
+        >
+          Annuler
+        </Button>
       </div>
     </div>
   );

@@ -25,19 +25,19 @@ export default function ButtonAppBar() {
 
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box>
       <AppBar position="static">
         <Toolbar>
           <Grid container justify="center">
             <Box
-              display="absolute"
+              display="flex"
               alignItems="center"
-              left="50%"
               component="img"
               sx={{
+                justifyContent: 'center',
                 height: 50,
                 width: 150,
-
+                marginLeft: "10%"
               }}
               alt="Minder"
               src="../logo-complete@2x.png"
@@ -45,11 +45,11 @@ export default function ButtonAppBar() {
             />
           </Grid>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{justifyContent: 'space-between', display: { xs: 'none', md: 'flex' } }}>
             <Button color="inherit" onClick={() => window.location.href = "/SignupSC"}>Partenaires</Button>
           </Box>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
