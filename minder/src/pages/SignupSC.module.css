@@ -128,8 +128,8 @@
     transform: translate(-50%, -70%);
     border-radius: 55px;
     background-color: var(--color-white);
-    width: 250px;
-    height: 700px;
+    width: 60vw;
+    height: 80vh;
   }
 
   .inscrivezVotreCentreSportif {
