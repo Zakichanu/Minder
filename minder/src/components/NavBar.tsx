@@ -30,14 +30,13 @@ export default function ButtonAppBar() {
         <Toolbar>
           <Grid container justify="center">
             <Box
-              display="flex"
-              justifyContent="center"
+              display="absolute"
               alignItems="center"
+              left="50%"
               component="img"
               sx={{
                 height: 50,
                 width: 150,
-                marginLeft: 12,
 
               }}
               alt="Minder"
