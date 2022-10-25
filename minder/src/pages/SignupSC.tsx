@@ -64,58 +64,13 @@ const SignupSC: FunctionComponent = () => {
         required
       />
       <TextField
-        className={styles.citySCInput}
+        className={styles.fnameRepresentSCInput}
         sx={{ width: 220 }}
         color="secondary"
         variant="outlined"
         type="text"
-        label="Ville CS"
-        placeholder="Ville du Centre Sportif"
-        size="small"
-        margin="none"
-        InputProps={{
-          className: styles.SCInputMobile,
-        }}
-        required
-      />
-      <TextField
-        className={styles.mailSCInput}
-        sx={{ width: 220 }}
-        color="secondary"
-        variant="outlined"
-        type="email"
-        label="Mail CS"
-        placeholder="Mail du Centre Sportif"
-        size="small"
-        margin="none"
-        InputProps={{
-          className: styles.SCInputMobile,
-        }}
-        required
-      />
-      <TextField
-        className={styles.postalCodeSCInput}
-        sx={{ width: 220 }}
-        color="secondary"
-        variant="outlined"
-        type="number"
-        label="Code Postal CS"
-        placeholder="Code postal du Centre Sportif"
-        size="small"
-        margin="none"
-        InputProps={{
-          className: styles.SCInputMobile,
-        }}
-        required
-      />
-      <TextField
-        className={styles.telSCInput}
-        sx={{ width: 220 }}
-        color="secondary"
-        variant="outlined"
-        type="tel"
-        label="Téléphone CS"
-        placeholder="Téléphone du Centre Sportif"
+        label="Prénom représentant"
+        placeholder="Prénom du représentant"
         size="small"
         margin="none"
         InputProps={{
@@ -139,13 +94,58 @@ const SignupSC: FunctionComponent = () => {
         required
       />
       <TextField
-        className={styles.fnameRepresentSCInput}
+        className={styles.citySCInput}
         sx={{ width: 220 }}
         color="secondary"
         variant="outlined"
         type="text"
-        label="Prénom représentant"
-        placeholder="Prénom du représentant"
+        label="Ville CS"
+        placeholder="Ville du Centre Sportif"
+        size="small"
+        margin="none"
+        InputProps={{
+          className: styles.SCInputMobile,
+        }}
+        required
+      />
+      <TextField
+        className={styles.postalCodeSCInput}
+        sx={{ width: 220 }}
+        color="secondary"
+        variant="outlined"
+        type="number"
+        label="Code Postal CS"
+        placeholder="Code postal du Centre Sportif"
+        size="small"
+        margin="none"
+        InputProps={{
+          className: styles.SCInputMobile,
+        }}
+        required
+      />
+      <TextField
+        className={styles.mailSCInput}
+        sx={{ width: 220 }}
+        color="secondary"
+        variant="outlined"
+        type="email"
+        label="Mail CS"
+        placeholder="Mail du Centre Sportif"
+        size="small"
+        margin="none"
+        InputProps={{
+          className: styles.SCInputMobile,
+        }}
+        required
+      />
+      <TextField
+        className={styles.telSCInput}
+        sx={{ width: 220 }}
+        color="secondary"
+        variant="outlined"
+        type="tel"
+        label="Téléphone CS"
+        placeholder="Téléphone du Centre Sportif"
         size="small"
         margin="none"
         InputProps={{
