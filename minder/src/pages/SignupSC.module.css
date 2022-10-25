@@ -97,7 +97,7 @@
 
 .signupButton {
   position: absolute;
-  top: 90%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -117,6 +117,16 @@
 
 .signupSCDiv.animate {
   animation: 0.25s ease 0s 1 normal forwards slide-in-top;
+}
+
+.linkToLogin {
+  position: absolute;
+  top: 85%;
+  left: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: auto;
+  color: #898989;
 }
 
 /* Mobile version*/
@@ -201,8 +211,19 @@
   .signupButton {
     border: 0;
     position: absolute;
-    top: 90%;
+    top: 80%;
     left: 50%;
+  }
+  
+  .linkToLogin {
+    position: absolute;
+    top: 85%;
+    left: 0%;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: auto;
+    color: #898989;
   }
 
   .SCInputMobile{
