@@ -38,7 +38,8 @@ const SignupSC: FunctionComponent = () => {
   return (
     <div className={styles.signupSCDiv} data-animate-on-scroll>
       <NavBar />
-      <div className={styles.rectangleDiv} />
+      <div className={styles.rectangleDiv}>
+
       <img
         className={styles.logoPetit1Icon}
         alt=""
@@ -57,66 +58,9 @@ const SignupSC: FunctionComponent = () => {
         placeholder="Nom du représentant"
         size="small"
         margin="none"
-        required
-      />
-      <TextField
-        className={styles.citySCInput}
-        sx={{ width: 284 }}
-        color="secondary"
-        variant="outlined"
-        type="text"
-        label="Ville CS"
-        placeholder="Ville du Centre Sportif"
-        size="small"
-        margin="none"
-        required
-      />
-      <TextField
-        className={styles.mailSCInput}
-        sx={{ width: 284 }}
-        color="secondary"
-        variant="outlined"
-        type="email"
-        label="Mail CS"
-        placeholder="Mail du Centre Sportif"
-        size="small"
-        margin="none"
-        required
-      />
-      <TextField
-        className={styles.postalCodeSCInput}
-        sx={{ width: 220 }}
-        color="secondary"
-        variant="outlined"
-        type="number"
-        label="Code Postal CS"
-        placeholder="Code postal du Centre Sportif"
-        size="small"
-        margin="none"
-        required
-      />
-      <TextField
-        className={styles.telSCInput}
-        sx={{ width: 220 }}
-        color="secondary"
-        variant="outlined"
-        type="tel"
-        label="Téléphone CS"
-        placeholder="Téléphone du Centre Sportif"
-        size="small"
-        margin="none"
-        required
-      />
-      <TextField
-        className={styles.addSCInput}
-        sx={{ width: 579 }}
-        color="secondary"
-        variant="outlined"
-        type="text"
-        label="Adresse postale CS"
-        placeholder="Adresse Centre Sportif"
-        size="small"
-        margin="none"
+        InputProps={{
+          className: styles.SCInputMobile,
+        }}
         required
       />
       <TextField
@@ -129,6 +73,84 @@ const SignupSC: FunctionComponent = () => {
         placeholder="Prénom du représentant"
         size="small"
         margin="none"
+        InputProps={{
+          className: styles.SCInputMobile,
+        }}
+        required
+      />
+      <TextField
+        className={styles.addSCInput}
+        sx={{ width: 579 }}
+        color="secondary"
+        variant="outlined"
+        type="text"
+        label="Adresse postale CS"
+        placeholder="Adresse Centre Sportif"
+        size="small"
+        margin="none"
+        InputProps={{
+          className: styles.SCInputMobile,
+        }}
+        required
+      />
+      <TextField
+        className={styles.citySCInput}
+        sx={{ width: 220 }}
+        color="secondary"
+        variant="outlined"
+        type="text"
+        label="Ville CS"
+        placeholder="Ville du Centre Sportif"
+        size="small"
+        margin="none"
+        InputProps={{
+          className: styles.SCInputMobile,
+        }}
+        required
+      />
+      <TextField
+        className={styles.postalCodeSCInput}
+        sx={{ width: 220 }}
+        color="secondary"
+        variant="outlined"
+        type="number"
+        label="Code Postal CS"
+        placeholder="Code postal du Centre Sportif"
+        size="small"
+        margin="none"
+        InputProps={{
+          className: styles.SCInputMobile,
+        }}
+        required
+      />
+      <TextField
+        className={styles.mailSCInput}
+        sx={{ width: 220 }}
+        color="secondary"
+        variant="outlined"
+        type="email"
+        label="Mail CS"
+        placeholder="Mail du Centre Sportif"
+        size="small"
+        margin="none"
+        InputProps={{
+          className: styles.SCInputMobile,
+        }}
+        required
+      />
+      <TextField
+        className={styles.telSCInput}
+        sx={{ width: 220 }}
+        color="secondary"
+        variant="outlined"
+        type="tel"
+        label="Téléphone CS"
+        placeholder="Téléphone du Centre Sportif"
+        size="small"
+        margin="none"
+        InputProps={{
+          className: styles.SCInputMobile,
+        }}
         required
       />
       <Button
@@ -137,8 +159,9 @@ const SignupSC: FunctionComponent = () => {
         variant="contained"
         color="secondary"
       >
-        Soumettre
+        Envoyer
       </Button>
+      </div>
     </div>
   );
 };
