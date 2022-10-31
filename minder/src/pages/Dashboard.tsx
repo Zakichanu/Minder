@@ -40,9 +40,22 @@ const Dashboard: FunctionComponent = () => {
       <NavBar />
       <div className={styles.ScrollPage}>
 
-        <div className={styles.rectangleContent}>
-        </div>
         
+            <div className={styles.rectangleContent}>
+            </div>
+
+            <div className={styles.rectangleContent}>
+            </div>
+
+            <div className={styles.rectangleContent}>
+            </div><div className={styles.rectangleContent}>
+            </div><div className={styles.rectangleContent}>
+            </div><div className={styles.rectangleContent}>
+            </div>
+            
+            <div className={styles.rectangleAjout}>
+            </div>
+            
       </div>
 
     </div>
