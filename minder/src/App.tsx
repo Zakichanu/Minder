@@ -5,10 +5,10 @@ import {
   useNavigationType,
 } from "react-router-dom";
 
-import Homepage from "./pages/HomePage";
-import SignupSC from "./pages/SignupSC";
-import LoginSC from "./pages/LoginSC";
 import Dashboard from "./pages/Dashboard";
+import Homepage from "./pages/HomePage";
+import LoginSC from "./pages/LoginSC";
+import SignupSC from "./pages/SignupSC";
 import { useEffect } from "react";
 
 function App() {
@@ -41,6 +41,10 @@ function App() {
       case "/LoginSC":
         title = "Espace centre sportif - Connexion";
         metaDescription = "Connexion";
+        break;
+      case "/Dashboard":
+        title = "Espace centre sportif - Tableau de bord";
+        metaDescription = "Tableau de bord";
         break;
     }
 

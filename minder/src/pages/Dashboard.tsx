@@ -1,4 +1,3 @@
-import { Button, TextField } from "@mui/material";
 import { FunctionComponent, useEffect } from "react";
 
 import NavBar from "../components/NavBar";
@@ -36,7 +35,7 @@ const Dashboard: FunctionComponent = () => {
   }, []);
 
   return (
-
+    
     <div className={styles.signupSCDiv}>
       <NavBar />
       <div className={styles.ScrollPage}>
