@@ -8,6 +8,7 @@ import {
 import Homepage from "./pages/HomePage";
 import SignupSC from "./pages/SignupSC";
 import LoginSC from "./pages/LoginSC";
+import Dashboard from "./pages/Dashboard";
 import { useEffect } from "react";
 
 function App() {
@@ -64,6 +65,8 @@ function App() {
       <Route path="/SignupSC" element={<SignupSC />} />
 
       <Route path="/LoginSC" element={<LoginSC />} />
+      
+      <Route path="/Dashboard" element={<Dashboard />} />
     </Routes>
   );
 }

@@ -28,7 +28,7 @@ export default function ButtonAppBar() {
     <Box>
       <AppBar position="static">
         <Toolbar>
-          <Grid container justify="center">
+          <Grid container justifyContent="center">
             <Box
               display="flex"
               alignItems="center"
