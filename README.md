@@ -53,7 +53,7 @@ Le site web sera en **React** et l'application mobile en **Flutter Dart**. L'API
 | 💡 Plannification des tâches | Tous | Terminé |
 | ⚛️ IHM du site web | Nicolas, Youssef | Développement |
 | 🧑🏻‍💻 Mapping BDD | Zakaria, Yanis | Développement |
-| 📲 IHM de l'application mobile | Zakaria, Youssef | Pas commencé |
+| 📲 IHM de l'application mobile | Zakaria, Youssef | Développement |
 | 🎒 Ajout du back-end | Nicolas, Yanis | Pas commencé |
 | ⛅️ Infrastructure cloud | Yanis, Youssef, Zakaria, Nicolas | Pas commencé |
 
