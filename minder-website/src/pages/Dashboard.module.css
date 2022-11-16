@@ -23,13 +23,36 @@
 .rectangleAjout {
   float: left;
   border-radius: 15%;
-  background-color: red;
+  background-color: white;
   width: 17vw;
   height: 35vh;
   margin-left: 6%;
   margin-top: 2%;
 }
 
+.ImgActivity {
+  margin-top: 25px;
+  margin-left: 25%;
+  width: 80px;
+  height: 80px;
+}
+
+.logoAjout {
+  width: 100px;
+  height: 100px;
+  margin-top: 32%;
+
+}
+.ImgExit, .ImgRefresh{
+  float:right;
+  margin-top: 5%;
+  width: 30px;
+  height: 30px;
+}
+
+.ImgExit {
+  margin-right: 5%;
+}
 
 .ScrollPage {
   display: flex;

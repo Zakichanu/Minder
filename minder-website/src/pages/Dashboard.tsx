@@ -42,18 +42,32 @@ const Dashboard: FunctionComponent = () => {
 
         
             <div className={styles.rectangleContent}>
-            </div>
-
-            <div className={styles.rectangleContent}>
-            </div>
-
-            <div className={styles.rectangleContent}>
-            </div><div className={styles.rectangleContent}>
-            </div><div className={styles.rectangleContent}>
-            </div><div className={styles.rectangleContent}>
+            <img
+                className={styles.ImgExit}
+                alt = ''
+                src = '../cross_exit.png'
+              />
+              <img
+                className={styles.ImgRefresh}
+                alt = ''
+                src = '../refresh.png'
+              />
+              <img
+                className={styles.ImgActivity}
+                alt = ''
+                src = '../football.png'
+                id ="imgActivity"
+              />
+              <p id = "nameActivity">activity</p>
+              <p id = "horaireActivity">Horaire :</p>
+              <p id = "PrixActivity">Prix $/h</p>
             </div>
             
             <div className={styles.rectangleAjout}>
+              <img 
+              className={styles.logoAjout}
+              alt = ''
+              src = "../ajout.png"/>
             </div>
             
       </div>
