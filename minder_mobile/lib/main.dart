@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitDown,
     ]);
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Minder',
       theme: ThemeData(
         primarySwatch: swatchify(Colors.deepPurple, 200),
       ),
