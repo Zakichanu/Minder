@@ -24,13 +24,11 @@ class _MyHomePageState extends State<MyHomePage> {
   String password = '';
 
   void _trySubmit() {
-    bool _isValid = _formKey.currentState!.validate();
+    bool isValid = _formKey.currentState!.validate();
     FocusScope.of(context).unfocus();
-    if (_isValid) {
+    if (isValid) {
       _formKey.currentState!.save();
     }
-    print(userEmail);
-    print(password);
   }
 
   @override
@@ -42,11 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
+      backgroundColor: const Color.fromRGBO(144, 150, 251, 1),
       body: Center(
           // Center is a layout widget. It takes a single child and positions it
           // in the middle of the parent.
@@ -62,6 +56,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
+                        const Image(
+                            image:
+                                AssetImage('lib/assets/img/Logo_complet.png')),
                         TextFormField(
                           validator: (value) {
                             if (value == null || !value.contains('@')) {

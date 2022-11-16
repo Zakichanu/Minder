@@ -30,6 +30,7 @@ flutter:
 
   assets:
     - lib/assets/img/LogoPetit.png
+    - lib/assets/img/Logo_complet.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
