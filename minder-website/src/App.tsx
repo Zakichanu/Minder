@@ -5,7 +5,9 @@ import {
   useNavigationType,
 } from "react-router-dom";
 
+import Dashboard from "./pages/Dashboard";
 import Homepage from "./pages/HomePage";
+import LoginSC from "./pages/LoginSC";
 import SignupSC from "./pages/SignupSC";
 import { useEffect } from "react";
 
@@ -30,9 +32,19 @@ function App() {
         title = "Minder - Accueil";
         metaDescription = "Vitrine";
         break;
+
       case "/SignupSC":
         title = "Espace centre sportif - Inscription";
         metaDescription = "Inscription";
+        break;
+
+      case "/LoginSC":
+        title = "Espace centre sportif - Connexion";
+        metaDescription = "Connexion";
+        break;
+      case "/Dashboard":
+        title = "Espace centre sportif - Tableau de bord";
+        metaDescription = "Tableau de bord";
         break;
     }
 
@@ -55,6 +67,10 @@ function App() {
       <Route path="/" element={<Homepage />} />
 
       <Route path="/SignupSC" element={<SignupSC />} />
+
+      <Route path="/LoginSC" element={<LoginSC />} />
+      
+      <Route path="/Dashboard" element={<Dashboard />} />
     </Routes>
   );
 }
