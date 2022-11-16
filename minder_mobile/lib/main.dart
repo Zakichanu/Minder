@@ -31,13 +31,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: swatchify(Colors.deepPurple, 300),
+        primarySwatch: swatchify(Colors.deepPurple, 200),
       ),
       home: AnimatedSplashScreen(
         splash: const Image(image: AssetImage('lib/assets/img/LogoPetit.png')),
         duration: 1500,
         nextScreen: const MyHomePage(title: "Minder"),
-        splashTransition: SplashTransition.fadeTransition,
+        splashTransition: SplashTransition.scaleTransition,
         backgroundColor: const Color.fromRGBO(130, 135, 219, 1),
         splashIconSize: 500,
       ),

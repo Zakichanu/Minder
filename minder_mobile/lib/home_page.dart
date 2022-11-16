@@ -98,6 +98,11 @@ class _MyHomePageState extends State<MyHomePage> {
                           onPressed: _trySubmit,
                           child: const Text('Connexion'),
                         ),
+                        const Text('Don\'t have an account?'),
+                        const Text('Create an account',
+                            style: TextStyle(
+                              color: Color.fromRGBO(144, 150, 251, 1),
+                            )),
                       ],
                     ),
                   )))),
