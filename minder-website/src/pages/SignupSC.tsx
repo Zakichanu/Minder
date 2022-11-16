@@ -1,4 +1,4 @@
-import { Button, TextField } from "@mui/material";
+import { Button, Link, TextField } from "@mui/material";
 import { FunctionComponent, useEffect } from "react";
 
 import NavBar from "../components/NavBar";
@@ -40,127 +40,132 @@ const SignupSC: FunctionComponent = () => {
       <NavBar />
       <div className={styles.rectangleDiv}>
 
-      <img
-        className={styles.logoPetit1Icon}
-        alt=""
-        src="../logopetit-1@2x.png"
-      />
-      <div className={styles.inscrivezVotreCentreSportif}>
-        Inscrivez votre centre sportif
-      </div>
-      <TextField
-        className={styles.nameRepresentSCInput}
-        sx={{ width: 220 }}
-        color="secondary"
-        variant="outlined"
-        type="text"
-        label="Nom représentant"
-        placeholder="Nom du représentant"
-        size="small"
-        margin="none"
-        InputProps={{
-          className: styles.SCInputMobile,
-        }}
-        required
-      />
-      <TextField
-        className={styles.fnameRepresentSCInput}
-        sx={{ width: 220 }}
-        color="secondary"
-        variant="outlined"
-        type="text"
-        label="Prénom représentant"
-        placeholder="Prénom du représentant"
-        size="small"
-        margin="none"
-        InputProps={{
-          className: styles.SCInputMobile,
-        }}
-        required
-      />
-      <TextField
-        className={styles.addSCInput}
-        sx={{ width: 579 }}
-        color="secondary"
-        variant="outlined"
-        type="text"
-        label="Adresse postale CS"
-        placeholder="Adresse Centre Sportif"
-        size="small"
-        margin="none"
-        InputProps={{
-          className: styles.SCInputMobile,
-        }}
-        required
-      />
-      <TextField
-        className={styles.citySCInput}
-        sx={{ width: 220 }}
-        color="secondary"
-        variant="outlined"
-        type="text"
-        label="Ville CS"
-        placeholder="Ville du Centre Sportif"
-        size="small"
-        margin="none"
-        InputProps={{
-          className: styles.SCInputMobile,
-        }}
-        required
-      />
-      <TextField
-        className={styles.postalCodeSCInput}
-        sx={{ width: 220 }}
-        color="secondary"
-        variant="outlined"
-        type="number"
-        label="Code Postal CS"
-        placeholder="Code postal du Centre Sportif"
-        size="small"
-        margin="none"
-        InputProps={{
-          className: styles.SCInputMobile,
-        }}
-        required
-      />
-      <TextField
-        className={styles.mailSCInput}
-        sx={{ width: 220 }}
-        color="secondary"
-        variant="outlined"
-        type="email"
-        label="Mail CS"
-        placeholder="Mail du Centre Sportif"
-        size="small"
-        margin="none"
-        InputProps={{
-          className: styles.SCInputMobile,
-        }}
-        required
-      />
-      <TextField
-        className={styles.telSCInput}
-        sx={{ width: 220 }}
-        color="secondary"
-        variant="outlined"
-        type="tel"
-        label="Téléphone CS"
-        placeholder="Téléphone du Centre Sportif"
-        size="small"
-        margin="none"
-        InputProps={{
-          className: styles.SCInputMobile,
-        }}
-        required
-      />
-      <Button
-        className={styles.signupButton}
-        sx={{ width: 142 }}
-        variant="contained"
-        color="secondary"
-      >
-        Envoyer
-      </Button>
+        <img
+          className={styles.logoPetit1Icon}
+          alt=""
+          src="../logopetit-1@2x.png"
+        />
+        <div className={styles.inscrivezVotreCentreSportif}>
+          Inscrivez votre centre sportif
+        </div>
+        <TextField
+          className={styles.nameRepresentSCInput}
+          sx={{ width: 220 }}
+          color="secondary"
+          variant="outlined"
+          type="text"
+          label="Nom représentant"
+          placeholder="Nom du représentant"
+          size="small"
+          margin="none"
+          InputProps={{
+            className: styles.SCInputMobile,
+          }}
+          required
+        />
+        <TextField
+          className={styles.fnameRepresentSCInput}
+          sx={{ width: 220 }}
+          color="secondary"
+          variant="outlined"
+          type="text"
+          label="Prénom représentant"
+          placeholder="Prénom du représentant"
+          size="small"
+          margin="none"
+          InputProps={{
+            className: styles.SCInputMobile,
+          }}
+          required
+        />
+        <TextField
+          className={styles.addSCInput}
+          sx={{ width: 579 }}
+          color="secondary"
+          variant="outlined"
+          type="text"
+          label="Adresse postale CS"
+          placeholder="Adresse Centre Sportif"
+          size="small"
+          margin="none"
+          InputProps={{
+            className: styles.SCInputMobile,
+          }}
+          required
+        />
+        <TextField
+          className={styles.citySCInput}
+          sx={{ width: 220 }}
+          color="secondary"
+          variant="outlined"
+          type="text"
+          label="Ville CS"
+          placeholder="Ville du Centre Sportif"
+          size="small"
+          margin="none"
+          InputProps={{
+            className: styles.SCInputMobile,
+          }}
+          required
+        />
+        <TextField
+          className={styles.postalCodeSCInput}
+          sx={{ width: 220 }}
+          color="secondary"
+          variant="outlined"
+          type="number"
+          label="Code Postal CS"
+          placeholder="Code postal du Centre Sportif"
+          size="small"
+          margin="none"
+          InputProps={{
+            className: styles.SCInputMobile,
+          }}
+          required
+        />
+        <TextField
+          className={styles.mailSCInput}
+          sx={{ width: 220 }}
+          color="secondary"
+          variant="outlined"
+          type="email"
+          label="Mail CS"
+          placeholder="Mail du Centre Sportif"
+          size="small"
+          margin="none"
+          InputProps={{
+            className: styles.SCInputMobile,
+          }}
+          required
+        />
+        <TextField
+          className={styles.telSCInput}
+          sx={{ width: 220 }}
+          color="secondary"
+          variant="outlined"
+          type="tel"
+          label="Téléphone CS"
+          placeholder="Téléphone du Centre Sportif"
+          size="small"
+          margin="none"
+          InputProps={{
+            className: styles.SCInputMobile,
+          }}
+          required
+        />
+        <Button
+          className={styles.signupButton}
+          sx={{ width: 142 }}
+          variant="contained"
+          color="secondary"
+        >
+          Envoyer
+        </Button>
+        <p className={styles.linkToLogin}>
+          Vous êtes déjà partenaire?  <Link href="/LoginSC" color="secondary" underline="hover">
+            {'Connectez-vous'}
+          </Link>
+        </p>
       </div>
     </div>
   );
