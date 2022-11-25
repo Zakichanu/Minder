@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'home_page.dart';
+import 'sign_up.dart';
 
 class LoadingScreen extends StatefulWidget {
   const LoadingScreen({Key? key}) : super(key: key);
