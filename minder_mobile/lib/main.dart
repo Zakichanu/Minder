@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
       home: AnimatedSplashScreen(
         splash: const Image(image: AssetImage('lib/assets/img/LogoPetit.png')),
         duration: 1500,
-        nextScreen: const MyHomePage(title: "Minder"),
+        nextScreen: const SignInPage(title: "Minder - Connexion"),
         splashTransition: SplashTransition.scaleTransition,
         backgroundColor: const Color.fromRGBO(130, 135, 219, 1),
         splashIconSize: 500,

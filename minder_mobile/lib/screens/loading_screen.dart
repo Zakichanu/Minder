@@ -23,7 +23,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
     Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-            builder: ((context) => const MyHomePage(title: "Quizz Ramadan"))));
+            builder: ((context) =>
+                const SignInPage(title: "Minder - Connexion"))));
   }
 
   @override
