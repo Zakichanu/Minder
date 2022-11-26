@@ -16,6 +16,7 @@ class _SignInPageState extends State<SignInPage> {
   String userEmail = '';
   String password = '';
 
+  final regexMail = RegExp(r'^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$');
   void _trySubmit() {
     bool isValid = _formKey.currentState!.validate();
     FocusScope.of(context).unfocus();
@@ -46,7 +47,10 @@ class _SignInPageState extends State<SignInPage> {
                                 AssetImage('lib/assets/img/Logo_complet.png')),
                         TextFormField(
                           validator: (value) {
-                            if (value == null || !value.contains('@')) {
+                            if (value == '') {
+                              return 'Requis';
+                            }
+                            if (!regexMail.hasMatch(value!)) {
                               return 'Entrez une adresse e-mail valide';
                             }
                             return null;
