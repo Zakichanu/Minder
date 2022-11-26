@@ -23,6 +23,8 @@ class _SignUpPageState extends State<SignUpPage> {
   String city = '';
   String confirmPassword = '';
 
+  final regexMail = RegExp(r'^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$');
+
   void _trySubmit() {
     bool isValid = _formKey.currentState!.validate();
     FocusScope.of(context).unfocus();
@@ -186,7 +188,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             if (value == '') {
                               return 'Requis';
                             }
-                            if (value!.contains('@')) {
+                            if (!regexMail.hasMatch(value!)) {
                               return 'Entrez une adresse e-mail valide';
                             }
                             return null;
