@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:minder_mobile/screens/sign_in.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key, required this.title}) : super(key: key);
@@ -58,11 +60,18 @@ class _SignUpPageState extends State<SignUpPage> {
                             image:
                                 AssetImage('lib/assets/img/Logo_complet.png')),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Flexible(
                                 child: TextFormField(
+                              validator: (value) {
+                                if (value == '') {
+                                  return 'Requis';
+                                }
+                                return null;
+                              },
                               key: const ValueKey('sName'),
-                              keyboardType: TextInputType.emailAddress,
+                              keyboardType: TextInputType.name,
                               decoration: const InputDecoration(
                                 labelText: 'Nom',
                               ),
@@ -70,10 +79,17 @@ class _SignUpPageState extends State<SignUpPage> {
                                 name = value as String;
                               },
                             )),
+                            const SizedBox(width: 25),
                             Flexible(
                               child: TextFormField(
+                                validator: (value) {
+                                  if (value == '') {
+                                    return 'Requis';
+                                  }
+                                  return null;
+                                },
                                 key: const ValueKey('fName'),
-                                keyboardType: TextInputType.emailAddress,
+                                keyboardType: TextInputType.name,
                                 decoration: const InputDecoration(
                                   labelText: 'Prénom',
                                 ),
@@ -89,6 +105,12 @@ class _SignUpPageState extends State<SignUpPage> {
                             SizedBox(
                                 width: 50,
                                 child: TextFormField(
+                                  validator: (value) {
+                                    if (value == '') {
+                                      return 'Requis';
+                                    }
+                                    return null;
+                                  },
                                   key: const ValueKey('addNumber'),
                                   keyboardType: TextInputType.number,
                                   decoration: const InputDecoration(
@@ -98,8 +120,15 @@ class _SignUpPageState extends State<SignUpPage> {
                                     addressNumber = value as String;
                                   },
                                 )),
+                            const SizedBox(width: 25),
                             Flexible(
                               child: TextFormField(
+                                validator: (value) {
+                                  if (value == '') {
+                                    return 'Requis';
+                                  }
+                                  return null;
+                                },
                                 key: const ValueKey('addStreet'),
                                 keyboardType: TextInputType.streetAddress,
                                 decoration: const InputDecoration(
@@ -112,9 +141,52 @@ class _SignUpPageState extends State<SignUpPage> {
                             )
                           ],
                         ),
+                        Row(
+                          children: [
+                            SizedBox(
+                                width: 100,
+                                child: TextFormField(
+                                  validator: (value) {
+                                    if (value == '') {
+                                      return 'Requis';
+                                    }
+                                    return null;
+                                  },
+                                  key: const ValueKey('addZipCode'),
+                                  keyboardType: TextInputType.number,
+                                  decoration: const InputDecoration(
+                                    labelText: 'Code Postal',
+                                  ),
+                                  onSaved: (value) {
+                                    zipCode = value as String;
+                                  },
+                                )),
+                            const SizedBox(width: 25),
+                            Flexible(
+                              child: TextFormField(
+                                validator: (value) {
+                                  if (value == '') {
+                                    return 'Requis';
+                                  }
+                                  return null;
+                                },
+                                key: const ValueKey('addCity'),
+                                decoration: const InputDecoration(
+                                  labelText: 'Ville',
+                                ),
+                                onSaved: (value) {
+                                  city = value as String;
+                                },
+                              ),
+                            )
+                          ],
+                        ),
                         TextFormField(
                           validator: (value) {
-                            if (value == null || !value.contains('@')) {
+                            if (value == '') {
+                              return 'Requis';
+                            }
+                            if (value!.contains('@')) {
                               return 'Entrez une adresse e-mail valide';
                             }
                             return null;
@@ -130,8 +202,11 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                         TextFormField(
                           validator: (value) {
-                            if (value == null || value.length < 7) {
-                              return 'Le mot de passe de passe doit avoir une longueur minimale de 8 caractères';
+                            if (value == '') {
+                              return 'Requis';
+                            }
+                            if (value!.length < 16) {
+                              return 'Le mot de passe de passe doit avoir une longueur minimale de 16 caractères';
                             }
                             return null;
                           },
@@ -144,6 +219,25 @@ class _SignUpPageState extends State<SignUpPage> {
                             password = value as String;
                           },
                         ),
+                        TextFormField(
+                          validator: (value) {
+                            if (value == '') {
+                              return 'Requis';
+                            }
+                            if (value != password) {
+                              return 'Veuillez renseigner le même mot de passe';
+                            }
+                            return null;
+                          },
+                          key: const ValueKey('confpassword'),
+                          decoration: const InputDecoration(
+                            labelText: 'Confirmation mot de passe',
+                          ),
+                          obscureText: true,
+                          onSaved: (value) {
+                            confirmPassword = value as String;
+                          },
+                        ),
                         const SizedBox(
                           height: 20,
                         ),
@@ -151,11 +245,31 @@ class _SignUpPageState extends State<SignUpPage> {
                           onPressed: _trySubmit,
                           child: const Text('Connexion'),
                         ),
-                        const Text('Don\'t have an account?'),
-                        const Text('Create an account',
-                            style: TextStyle(
-                              color: Color.fromRGBO(144, 150, 251, 1),
-                            )),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        RichText(
+                          text: TextSpan(children: [
+                            const TextSpan(
+                                text: "Déjà inscrit? ",
+                                style: TextStyle(color: Colors.black)),
+                            TextSpan(
+                                text: 'Connexion',
+                                style: const TextStyle(
+                                  color: Color.fromRGBO(144, 150, 251, 1),
+                                ),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    Navigator.pushReplacement(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: ((context) =>
+                                                const SignInPage(
+                                                    title:
+                                                        "Minder - Connexion"))));
+                                  }),
+                          ]),
+                        ),
                       ],
                     ),
                   )))),
