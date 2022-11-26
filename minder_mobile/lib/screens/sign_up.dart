@@ -23,11 +23,12 @@ class _SignUpPageState extends State<SignUpPage> {
   String city = '';
   String confirmPassword = '';
   String phone = '';
+  String username = '';
 
   final regexMail = RegExp(r'^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$');
   final regexPhoneFR =
       RegExp(r'^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$');
-
+  final regexUsername = RegExp(r'^[A-Za-z][A-Za-z0-9_]{7,29}$');
   void _trySubmit() {
     bool isValid = _formKey.currentState!.validate();
     FocusScope.of(context).unfocus();
@@ -232,44 +233,74 @@ class _SignUpPageState extends State<SignUpPage> {
                                   )
                                 ],
                               ),
+                              // Pseudo
                               TextFormField(
                                 validator: (value) {
                                   if (value == '') {
                                     return 'Requis';
                                   }
-                                  if (value!.length < 16) {
-                                    return 'Le mot de passe de passe doit avoir une longueur minimale de 16 caractères';
+                                  if (!regexUsername.hasMatch(value!)) {
+                                    return 'Entrez un pseudo compris entre 8 et 30 caractères, sans espaces';
                                   }
                                   return null;
                                 },
-                                key: const ValueKey('password'),
+                                key: const ValueKey('username'),
                                 decoration: const InputDecoration(
-                                  labelText: 'Mot de passe',
+                                  labelText: 'Pseudonyme',
                                 ),
-                                obscureText: true,
                                 onSaved: (value) {
-                                  password = value as String;
+                                  username = value as String;
                                 },
                               ),
-                              TextFormField(
-                                validator: (value) {
-                                  if (value == '') {
-                                    return 'Requis';
-                                  }
-                                  if (value != password) {
-                                    return 'Veuillez renseigner le même mot de passe';
-                                  }
-                                  return null;
-                                },
-                                key: const ValueKey('confpassword'),
-                                decoration: const InputDecoration(
-                                  labelText: 'Confirmation mot de passe',
-                                ),
-                                obscureText: true,
-                                onSaved: (value) {
-                                  confirmPassword = value as String;
-                                },
-                              ),
+                              // Mot de passe + Confirmation
+                              Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Flexible(
+                                        child: TextFormField(
+                                      validator: (value) {
+                                        if (value == '') {
+                                          return 'Requis';
+                                        }
+                                        if (value!.length < 16) {
+                                          return 'Le mot de passe de passe doit avoir une longueur minimale de 16 caractères';
+                                        }
+                                        return null;
+                                      },
+                                      key: const ValueKey('password'),
+                                      decoration: const InputDecoration(
+                                        labelText: 'Mot de passe',
+                                      ),
+                                      obscureText: true,
+                                      onSaved: (value) {
+                                        password = value as String;
+                                      },
+                                    )),
+                                    const SizedBox(
+                                      width: 25,
+                                    ),
+                                    Flexible(
+                                        child: TextFormField(
+                                      validator: (value) {
+                                        if (value == '') {
+                                          return 'Requis';
+                                        }
+                                        if (value != password) {
+                                          return 'Veuillez renseigner le même mot de passe';
+                                        }
+                                        return null;
+                                      },
+                                      key: const ValueKey('confpassword'),
+                                      decoration: const InputDecoration(
+                                        labelText: 'Confirmation mot de passe',
+                                      ),
+                                      obscureText: true,
+                                      onSaved: (value) {
+                                        confirmPassword = value as String;
+                                      },
+                                    ))
+                                  ]),
                               const SizedBox(
                                 height: 20,
                               ),
