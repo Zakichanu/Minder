@@ -17,6 +17,7 @@ class _SignUpPageState extends State<SignUpPage> {
   String dateOfBirth = '';
   String userEmail = '';
   String password = '';
+  String passwordTmp = '';
   String addressNumber = '';
   String addressStreetName = '';
   String zipCode = '';
@@ -266,6 +267,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                         if (value!.length < 16) {
                                           return 'Le mot de passe de passe doit avoir une longueur minimale de 16 caractères';
                                         }
+                                        passwordTmp = value;
                                         return null;
                                       },
                                       key: const ValueKey('password'),
@@ -286,7 +288,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                         if (value == '') {
                                           return 'Requis';
                                         }
-                                        if (value != password) {
+                                        if (value! != passwordTmp) {
                                           return 'Veuillez renseigner le même mot de passe';
                                         }
                                         return null;
@@ -306,7 +308,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               ),
                               ElevatedButton(
                                 onPressed: _trySubmit,
-                                child: const Text('Connexion'),
+                                child: const Text('Inscription'),
                               ),
                               const SizedBox(
                                 height: 20,
