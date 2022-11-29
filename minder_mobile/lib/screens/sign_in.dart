@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:minder_mobile/screens/sign_up.dart';
 
-import 'routes.dart';
+import '../components/routes_navbar.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key, required this.title}) : super(key: key);
@@ -29,7 +29,7 @@ class _SignInPageState extends State<SignInPage> {
             context,
             MaterialPageRoute(
                 builder: ((context) =>
-                    const RoutesPage(title: "Minder - HomePage"))));
+                    const RoutesNavBarComponent(title: "Minder - HomePage"))));
       }
     }
   }

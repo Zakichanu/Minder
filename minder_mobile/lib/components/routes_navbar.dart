@@ -1,15 +1,16 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
-class RoutesPage extends StatefulWidget {
-  const RoutesPage({Key? key, required this.title}) : super(key: key);
+class RoutesNavBarComponent extends StatefulWidget {
+  const RoutesNavBarComponent({Key? key, required this.title})
+      : super(key: key);
   final String title;
 
   @override
-  State<RoutesPage> createState() => _RoutesState();
+  State<RoutesNavBarComponent> createState() => _RoutesNavbarState();
 }
 
-class _RoutesState extends State<RoutesPage> {
+class _RoutesNavbarState extends State<RoutesNavBarComponent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
