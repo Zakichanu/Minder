@@ -2,6 +2,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:minder_mobile/screens/sign_up.dart';
 
+import 'home_page.dart';
+
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key, required this.title}) : super(key: key);
 
@@ -22,6 +24,13 @@ class _SignInPageState extends State<SignInPage> {
     FocusScope.of(context).unfocus();
     if (isValid) {
       _formKey.currentState!.save();
+      if (userEmail == "test@test.com" && password == "zakariatobbaltest") {
+        Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: ((context) =>
+                    const HomePage(title: "Minder - HomePage"))));
+      }
     }
   }
 
