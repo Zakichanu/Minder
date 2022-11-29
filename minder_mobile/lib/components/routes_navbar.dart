@@ -2,9 +2,11 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 class RoutesNavBarComponent extends StatefulWidget {
-  const RoutesNavBarComponent({Key? key, required this.title})
+  const RoutesNavBarComponent(
+      {Key? key, required this.title, required this.indexPage})
       : super(key: key);
   final String title;
+  final int indexPage;
 
   @override
   State<RoutesNavBarComponent> createState() => _RoutesNavbarState();
@@ -16,6 +18,7 @@ class _RoutesNavbarState extends State<RoutesNavBarComponent> {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: const Color.fromRGBO(144, 150, 251, 1),
+        index: 2,
         items: const <Widget>[
           Icon(Icons.event, size: 30),
           Icon(Icons.sports, size: 30),
