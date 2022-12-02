@@ -28,8 +28,8 @@ class _SignInPageState extends State<SignInPage> {
         Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-                builder: ((context) => const RoutesNavBarComponent(
-                    title: "Minder - HomePage", indexPage: 2))));
+                builder: ((context) =>
+                    const RoutesNavBarComponent(title: "Minder - HomePage"))));
       }
     }
   }

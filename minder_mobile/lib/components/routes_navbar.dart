@@ -1,24 +1,36 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:minder_mobile/screens/home_page.dart';
+import 'package:minder_mobile/screens/sport_center.dart';
 
 class RoutesNavBarComponent extends StatefulWidget {
-  const RoutesNavBarComponent(
-      {Key? key, required this.title, required this.indexPage})
+  const RoutesNavBarComponent({Key? key, required this.title})
       : super(key: key);
   final String title;
-  final int indexPage;
 
   @override
   State<RoutesNavBarComponent> createState() => _RoutesNavbarState();
 }
 
 class _RoutesNavbarState extends State<RoutesNavBarComponent> {
+  int indexToBuild = 2;
+  Widget _container(int index) {
+    switch (index) {
+      case 2:
+        setState(() {});
+        return const HomePage(title: "Minder - Accueil");
+      default:
+        setState(() {});
+        return const SportCenter(title: "Minder - SportCenter");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: const Color.fromRGBO(144, 150, 251, 1),
-        index: 2,
+        index: indexToBuild,
         items: const <Widget>[
           Icon(Icons.event, size: 30),
           Icon(Icons.sports, size: 30),
@@ -27,10 +39,31 @@ class _RoutesNavbarState extends State<RoutesNavBarComponent> {
           Icon(Icons.settings, size: 30),
         ],
         onTap: (index) {
-          //Handle button tap
+          if (index != indexToBuild) {
+            _container(index);
+            indexToBuild = index;
+          }
         },
       ),
-      body: Container(color: const Color.fromRGBO(144, 150, 251, 1)),
+      body: _container(indexToBuild),
     );
   }
 }
+
+// class BodyLayout extends StatelessWidget {
+//   Widget _container(int index) {
+//     switch (index) {
+//       case 2:
+//         return const HomePage(title: "Minder - Accueil");
+//       default:
+//         return const SportCenter(title: "Minder - SportCenter");
+//     }
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     throw UnimplementedError();
+//   }
+
+// }
