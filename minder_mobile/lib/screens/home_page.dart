@@ -1,56 +1,122 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
+class HomePage extends StatelessWidget {
+  HomePage({Key? key}) : super(key: key);
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final bool isLargeScreen = width > 800;
+
     return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
-        title: const Text('HomePage'),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.add_alert),
-            tooltip: 'Show Snackbar',
-            onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('This is a snackbar')));
-            },
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        titleSpacing: 0,
+        leading: isLargeScreen
+            ? null
+            : IconButton(
+                icon: const Icon(Icons.menu),
+                onPressed: () => _scaffoldKey.currentState?.openDrawer(),
+              ),
+        title: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                "Logo",
+                style:
+                    TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
+              ),
+              if (isLargeScreen) Expanded(child: _navBarItems())
+            ],
           ),
-          IconButton(
-            icon: const Icon(Icons.navigate_next),
-            tooltip: 'Go to the next page',
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute<void>(
-                builder: (BuildContext context) {
-                  return Scaffold(
-                    appBar: AppBar(
-                      title: const Text('Next page'),
-                    ),
-                    body: const Center(
-                      child: Text(
-                        'This is the next page',
-                        style: TextStyle(fontSize: 24),
-                      ),
-                    ),
-                  );
-                },
-              ));
-            },
-          ),
+        ),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.only(right: 16.0),
+            child: CircleAvatar(child: _ProfileIcon()),
+          )
         ],
       ),
-      body: Center(
-        child: Column(
-          children: const [Text("TOTO")],
+      drawer: isLargeScreen ? null : _drawer(),
+      body: const Center(
+        child: Text(
+          "Body",
         ),
       ),
     );
+  }
+
+  Widget _drawer() => Drawer(
+        child: ListView(
+          children: _menuItems
+              .map((item) => ListTile(
+                    onTap: () {
+                      _scaffoldKey.currentState?.openEndDrawer();
+                    },
+                    title: Text(item),
+                  ))
+              .toList(),
+        ),
+      );
+
+  Widget _navBarItems() => Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: _menuItems
+            .map(
+              (item) => InkWell(
+                onTap: () {},
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 24.0, horizontal: 16),
+                  child: Text(
+                    item,
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                ),
+              ),
+            )
+            .toList(),
+      );
+}
+
+final List<String> _menuItems = <String>[
+  'About',
+  'Contact',
+  'Settings',
+  'Sign Out',
+];
+
+enum Menu { itemOne, itemTwo, itemThree }
+
+class _ProfileIcon extends StatelessWidget {
+  const _ProfileIcon({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<Menu>(
+        icon: const Icon(Icons.person),
+        offset: const Offset(0, 40),
+        onSelected: (Menu item) {},
+        itemBuilder: (BuildContext context) => <PopupMenuEntry<Menu>>[
+              const PopupMenuItem<Menu>(
+                value: Menu.itemOne,
+                child: Text('Account'),
+              ),
+              const PopupMenuItem<Menu>(
+                value: Menu.itemTwo,
+                child: Text('Settings'),
+              ),
+              const PopupMenuItem<Menu>(
+                value: Menu.itemThree,
+                child: Text('Sign Out'),
+              ),
+            ]);
   }
 }

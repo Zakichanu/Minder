@@ -18,7 +18,7 @@ class _RoutesNavbarState extends State<RoutesNavBarComponent> {
     switch (index) {
       case 2:
         setState(() {});
-        return const HomePage(title: "Minder - Accueil");
+        return HomePage();
       default:
         setState(() {});
         return const SportCenter(title: "Minder - SportCenter");
@@ -49,21 +49,3 @@ class _RoutesNavbarState extends State<RoutesNavBarComponent> {
     );
   }
 }
-
-// class BodyLayout extends StatelessWidget {
-//   Widget _container(int index) {
-//     switch (index) {
-//       case 2:
-//         return const HomePage(title: "Minder - Accueil");
-//       default:
-//         return const SportCenter(title: "Minder - SportCenter");
-//     }
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     // TODO: implement build
-//     throw UnimplementedError();
-//   }
-
-// }
