@@ -27,10 +27,10 @@ class HomePage extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                "Logo",
-                style:
-                    TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
+              const Image(
+                image: AssetImage('lib/assets/img/Logo_complet.png'),
+                height: 150,
+                width: 150,
               ),
               if (isLargeScreen) Expanded(child: _navBarItems())
             ],
