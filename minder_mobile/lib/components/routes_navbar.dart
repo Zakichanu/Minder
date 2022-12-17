@@ -29,14 +29,15 @@ class _RoutesNavbarState extends State<RoutesNavBarComponent> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: const Color.fromRGBO(144, 150, 251, 1),
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+        color: const Color.fromRGBO(144, 150, 251, 1),
         index: indexToBuild,
         items: const <Widget>[
-          Icon(Icons.event, size: 30),
-          Icon(Icons.sports, size: 30),
-          Icon(Icons.home, size: 30),
-          Icon(Icons.business_outlined, size: 30),
-          Icon(Icons.settings, size: 30),
+          Icon(Icons.event, size: 30, color: Colors.white),
+          Icon(Icons.sports, size: 30, color: Colors.white),
+          Icon(Icons.home, size: 30, color: Colors.white),
+          Icon(Icons.business_outlined, size: 30, color: Colors.white),
+          Icon(Icons.settings, size: 30, color: Colors.white),
         ],
         onTap: (index) {
           if (index != indexToBuild) {
