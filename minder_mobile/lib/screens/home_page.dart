@@ -9,47 +9,78 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final bool isLargeScreen = width > 800;
-
+    var size = MediaQuery.of(context).size;
     return Scaffold(
-      key: _scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        titleSpacing: 0,
-        leading: isLargeScreen
-            ? null
-            : IconButton(
-                icon: const Icon(Icons.menu),
-                onPressed: () => _scaffoldKey.currentState?.openDrawer(),
-              ),
-        title: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+        key: _scaffoldKey,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          titleSpacing: 0,
+          leading: isLargeScreen
+              ? null
+              : IconButton(
+                  icon: const Icon(Icons.menu),
+                  onPressed: () => _scaffoldKey.currentState?.openDrawer(),
+                ),
+          title: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Image(
+                  image: AssetImage('lib/assets/img/Logo_complet.png'),
+                  height: 150,
+                  width: 150,
+                ),
+                if (isLargeScreen) Expanded(child: _navBarItems())
+              ],
+            ),
+          ),
+          actions: const [
+            Padding(
+              padding: EdgeInsets.only(right: 16.0),
+              child: CircleAvatar(child: _ProfileIcon()),
+            )
+          ],
+        ),
+        drawer: isLargeScreen ? null : _drawer(),
+        body: SafeArea(
+          child: Stack(
             children: [
-              const Image(
-                image: AssetImage('lib/assets/img/Logo_complet.png'),
-                height: 150,
-                width: 150,
-              ),
-              if (isLargeScreen) Expanded(child: _navBarItems())
+              ListView(
+                physics: BouncingScrollPhysics(),
+                children: [
+                  SizedBox(
+                    height: size.height * 0.02,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: width * 0.05),
+                    child: Hero(
+                      tag: "sleepMeditation",
+                      child: Material(
+                        color: Colors.transparent,
+                        child: RichText(
+                            text: TextSpan(children: [
+                          TextSpan(
+                              text: "Bienvenue,",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: size.height * 0.03)),
+                          TextSpan(
+                              text: " Zakaria!",
+                              style: TextStyle(
+                                  color: const Color.fromRGBO(144, 150, 251, 1),
+                                  fontSize: size.height * 0.03,
+                                  fontWeight: FontWeight.bold)),
+                        ])),
+                      ),
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
-        ),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(right: 16.0),
-            child: CircleAvatar(child: _ProfileIcon()),
-          )
-        ],
-      ),
-      drawer: isLargeScreen ? null : _drawer(),
-      body: const Center(
-        child: Text(
-          "Body",
-        ),
-      ),
-    );
+        ));
   }
 
   Widget _drawer() => Drawer(
