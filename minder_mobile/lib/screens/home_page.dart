@@ -76,81 +76,108 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ),
+                  const SizedBox(
+                    height: 20,
+                  ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Expanded(
-                          child: TextButton(
-                        onPressed: () {
-                          // Code à exécuter lorsque le bouton est appuyé
-                        },
-                        style: const ButtonStyle(
-                          backgroundColor: MaterialStatePropertyAll(
-                              Color.fromRGBO(190, 193, 229, 1)),
+                      Container(
+                        width: 150,
+                        alignment: Alignment.center,
+                        child: TextButton(
+                          onPressed: () {
+                            // Code à exécuter lorsque le bouton est appuyé
+                          },
+                          style: const ButtonStyle(
+                            backgroundColor: MaterialStatePropertyAll(
+                                Color.fromRGBO(190, 193, 229, 1)),
+                          ),
+                          child: Row(
+                            children: const [
+                              Icon(Icons.favorite, color: Colors.black),
+                              Text('Like',
+                                  style: TextStyle(color: Colors.black)),
+                            ],
+                          ),
                         ),
-                        child: Row(
-                          children: const [
-                            Icon(Icons.favorite, color: Colors.black),
-                            Text('Like', style: TextStyle(color: Colors.black)),
-                          ],
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      Container(
+                        width: 150,
+                        alignment: Alignment.center,
+                        child: TextButton(
+                          onPressed: () {
+                            // Code à exécuter lorsque le bouton est appuyé
+                          },
+                          style: const ButtonStyle(
+                            backgroundColor: MaterialStatePropertyAll(
+                                Color.fromRGBO(190, 193, 229, 1)),
+                          ),
+                          child: Row(
+                            children: const [
+                              Icon(Icons.favorite, color: Colors.black),
+                              Text('Like',
+                                  style: TextStyle(color: Colors.black)),
+                            ],
+                          ),
                         ),
-                      )),
-                      Expanded(
-                          child: TextButton(
-                        onPressed: () {
-                          // Code à exécuter lorsque le bouton est appuyé
-                        },
-                        style: const ButtonStyle(
-                          backgroundColor: MaterialStatePropertyAll(
-                              Color.fromRGBO(190, 193, 229, 1)),
-                        ),
-                        child: Row(
-                          children: const [
-                            Icon(Icons.favorite, color: Colors.black),
-                            Text('Like', style: TextStyle(color: Colors.black)),
-                          ],
-                        ),
-                      ))
+                      ),
                     ],
                   ),
                   SizedBox(
                     height: size.height * 0.02,
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Expanded(
-                          child: TextButton(
-                        onPressed: () {
-                          // Code à exécuter lorsque le bouton est appuyé
-                        },
-                        style: const ButtonStyle(
-                          backgroundColor: MaterialStatePropertyAll(
-                              Color.fromRGBO(190, 193, 229, 1)),
+                      Container(
+                        width: 150,
+                        alignment: Alignment.center,
+                        child: TextButton(
+                          onPressed: () {
+                            // Code à exécuter lorsque le bouton est appuyé
+                          },
+                          style: const ButtonStyle(
+                            backgroundColor: MaterialStatePropertyAll(
+                                Color.fromRGBO(190, 193, 229, 1)),
+                          ),
+                          child: Row(
+                            children: const [
+                              Icon(Icons.favorite, color: Colors.black),
+                              Text('Like',
+                                  style: TextStyle(color: Colors.black)),
+                            ],
+                          ),
                         ),
-                        child: Row(
-                          children: const [
-                            Icon(Icons.favorite, color: Colors.black),
-                            Text('Like', style: TextStyle(color: Colors.black)),
-                          ],
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      Container(
+                        width: 150,
+                        alignment: Alignment.center,
+                        child: TextButton(
+                          onPressed: () {
+                            // Code à exécuter lorsque le bouton est appuyé
+                          },
+                          style: const ButtonStyle(
+                            backgroundColor: MaterialStatePropertyAll(
+                                Color.fromRGBO(190, 193, 229, 1)),
+                          ),
+                          child: Row(
+                            children: const [
+                              Icon(Icons.favorite, color: Colors.black),
+                              Text('Like',
+                                  style: TextStyle(color: Colors.black)),
+                            ],
+                          ),
                         ),
-                      )),
-                      Expanded(
-                          child: TextButton(
-                        onPressed: () {
-                          // Code à exécuter lorsque le bouton est appuyé
-                        },
-                        style: const ButtonStyle(
-                          backgroundColor: MaterialStatePropertyAll(
-                              Color.fromRGBO(190, 193, 229, 1)),
-                        ),
-                        child: Row(
-                          children: const [
-                            Icon(Icons.favorite, color: Colors.black),
-                            Text('Like', style: TextStyle(color: Colors.black)),
-                          ],
-                        ),
-                      ))
+                      ),
                     ],
-                  )
+                  ),
                 ],
               )
             ],
