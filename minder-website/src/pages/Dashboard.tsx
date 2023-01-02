@@ -2,6 +2,7 @@ import { FunctionComponent, useEffect } from "react";
 
 import NavBar from "../components/NavBar";
 import styles from "./Dashboard.module.css";
+import CardEvent from "../components/CardEvent";
 
 const Dashboard: FunctionComponent = () => {
   useEffect(() => {
@@ -39,8 +40,7 @@ const Dashboard: FunctionComponent = () => {
     <div className={styles.signupSCDiv}>
       <NavBar />
       <div className={styles.ScrollPage}>
-
-        
+          <CardEvent img="../football.png" title="Football" description="Evenement de football professionnel poussef pouazzani pouhami est bcp trop bo ainsi que picolas pataillard ce gros beaugosse fils lointain de louis XVI quel homme et n'en parlons pas de panis pamraoui ce gros dog 'humain' qui devrait penser à ses potes et aussi à acheter des croquettes big dog va" />
             <div className={styles.rectangleContent}>
             <img
                 className={styles.ImgExit}
